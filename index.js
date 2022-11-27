@@ -37,7 +37,7 @@ app.post('/', async (req, res) => {
     // })
 })
 
-app.get('/', async (req, res) =>{
+app.get('/chat', async (req, res) =>{
     res.sendFile(__dirname+'/index.html')
     // try {
     //     const Message=await MessageSchema.find();
