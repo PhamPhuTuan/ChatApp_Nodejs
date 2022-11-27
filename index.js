@@ -20,6 +20,6 @@ io.on('connection', (socket) => {
     })
 })
 
-server.listen(2999, () => {
+server.listen(process.env.PORT, () => {
     console.log('listening on port 2999')
 })
