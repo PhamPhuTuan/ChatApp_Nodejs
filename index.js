@@ -38,14 +38,14 @@ app.post('/', async (req, res) => {
 })
 
 app.get('/chat', async (req, res) =>{
-    res.sendFile(__dirname+'/index.html')
-    // try {
-    //     const Message=await MessageSchema.find();
-    //     res.status(200).json(Message)
-    // }
-    // catch(e){
-    //     res.status(500).json(e)
-    // }
+//     res.sendFile(__dirname+'/index.html')
+    try {
+        const Message=await MessageSchema.find();
+        res.status(200).json(Message)
+    }
+    catch(e){
+        res.status(500).json(e)
+    }
 })
 
 io.on('connection', (socket) => {
